@@ -1,0 +1,47 @@
+<h3 class="text-center">Add Trainee</h3>
+<div class="row">
+
+    <div class="col-sm-2"></div>
+
+    <div class="col-sm-8">
+        <form>
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input id="firstName" class="form-control" type="text" name="firstName" ng-model="item.FirstName" />
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input id="lastName" class="form-control" type="text" name="lastName" ng-model="item.LastName" />
+            </div>
+            <div class="form-group">
+                <label for="middleName">Middle Name:</label>
+                <input id="middleName" class="form-control" type="text" name="middleName" ng-model="item.MiddleName" />
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input id="email" class="form-control" type="email" name="email" ng-model="item.Email" />
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input id="phone" class="form-control" type="tel" name="phone" ng-model="item.Phone" />
+            </div>
+            <!--<div class="form-group">
+                <label for="skill">Primary Skill:</label>
+                <input id="skill" class="form-control" type="text" name="skill" />
+            </div>-->
+            <div class="form-group">
+                <label for="myMentor">Mentor:</label>
+                <select id="myMentor" name="myMentor" class="form-control" ng-model="item.MentorId">
+                    <option selected="selected" value="{{mentor.Id}}" ng-repeat="mentor in mentorCollection">{{mentor.LastName + " " + mentor.FirstName + " " + mentor.MiddleName}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary btn-success" ng-click="addNewTrainee(item)">Save</button>
+                <button type="button" class="btn btn-primary btn-info" ng-click="back.path('/trainees')">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-sm-2"></div>
+
+</div>

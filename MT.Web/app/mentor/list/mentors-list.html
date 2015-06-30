@@ -1,0 +1,21 @@
+<table class="table table-striped table-hover">
+    <thead>
+    <tr>
+        <td>№</td>
+        <td>Name</td>
+        <td>Last Name</td>
+        <td>Middle Name</td>
+        <td>Primary Skill</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="mentor in mentorCollection | filter: search" ng-click="currentPath.path(currentPath.path() + '/' + mentor.Id)">
+
+        <td>{{$index + 1}}</td>
+        <td>{{mentor.FirstName}}</td>
+        <td>{{mentor.LastName}}</td>
+        <td>{{mentor.MiddleName}}</td>
+        <td>{{mentor.PrimarySkill}}</td>
+    </tr>
+    </tbody>
+</table>

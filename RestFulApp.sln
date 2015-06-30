@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2013 for Web
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{DCCEDE77-FCDE-48CD-8853-F4B6C0C8C1B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MT.Data", "Data\MT.Data.csproj", "{DCCEDE77-FCDE-48CD-8853-F4B6C0C8C1B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestClient", "TestClient\TestClient.csproj", "{A1C552E1-E288-4FA1-87C1-22384A827135}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MT.Web", "MT.Web\MT.Web.csproj", "{2DD355EA-242F-47EF-B096-8C8CAC6C09DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{DCCEDE77-FCDE-48CD-8853-F4B6C0C8C1B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCCEDE77-FCDE-48CD-8853-F4B6C0C8C1B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCCEDE77-FCDE-48CD-8853-F4B6C0C8C1B7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A1C552E1-E288-4FA1-87C1-22384A827135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A1C552E1-E288-4FA1-87C1-22384A827135}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A1C552E1-E288-4FA1-87C1-22384A827135}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A1C552E1-E288-4FA1-87C1-22384A827135}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DD355EA-242F-47EF-B096-8C8CAC6C09DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DD355EA-242F-47EF-B096-8C8CAC6C09DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DD355EA-242F-47EF-B096-8C8CAC6C09DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DD355EA-242F-47EF-B096-8C8CAC6C09DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

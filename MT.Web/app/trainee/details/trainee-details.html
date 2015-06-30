@@ -1,0 +1,36 @@
+<div class="row">
+
+    <div class="col-sm-3">
+    </div>
+
+    <div class="col-sm-6">
+        <div class="form-group" ng-if="trainee">
+            <pre>    
+            <b>Name:</b> {{trainee.FirstName}}
+            </pre>
+            <pre>    
+            <b>Last Name:</b> {{trainee.LastName}}
+            </pre>
+            <pre>    
+            <b>Middle Name:</b> {{trainee.MiddleName}}
+            </pre>
+            <pre>    
+            <b>Email:</b> {{trainee.Email}}
+            </pre>
+            <pre>
+
+            <b>Phone:</b> {{trainee.Phone}}
+            </pre>
+        </div>
+        <p ng-if="!trainee">{{empty}}</p>
+
+
+        <div class="form-group">
+            <button type="button" class="btn btn-primary btn-info" ng-click="back.path('/trainees')">Back</button>
+        </div>
+    </div>
+
+    <div class="col-sm-3">
+    </div>
+
+</div>

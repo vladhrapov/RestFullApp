@@ -30,6 +30,8 @@
 # Directories
 packages/
 TestClient
+bin/
+obj/
 
 # Help files
 *.suo

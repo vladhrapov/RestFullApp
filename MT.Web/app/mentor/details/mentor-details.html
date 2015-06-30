@@ -1,0 +1,39 @@
+<div class="row">
+
+    <div class="col-sm-3">
+    </div>
+
+    <div class="col-sm-6">
+        <div class="form-group" ng-if="mentor">
+            <pre>    
+    <b>Name:</b> {{mentor.FirstName}}
+            </pre>
+            <pre>    
+    <b>Last Name:</b> {{mentor.LastName}}
+            </pre>
+            <pre>    
+    <b>Middle Name:</b> {{mentor.MiddleName}}
+            </pre>
+            <pre>    
+    <b>Email:</b> {{mentor.Email}}
+            </pre>
+            <pre>    
+    <b>Primary Skill:</b> {{mentor.PrimarySkill}}
+            </pre>
+            <pre>
+
+    <b>Phone:</b> {{mentor.Phone}}
+            </pre>
+        </div>
+        <p ng-if="!mentor">{{empty}}</p>
+
+        <div class="form-group">
+            <button type="button" class="btn btn-primary btn-info" ng-click="back.path('/mentors')">Back</button>
+        </div>
+    </div>
+
+    <div class="col-sm-3">
+    </div>
+
+</div>
+
