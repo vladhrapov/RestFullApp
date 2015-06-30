@@ -8,7 +8,9 @@
         });
         
         $scope.addNewTrainee = function (item) {
-            traineesService.add(item);
-            $location.path('/trainees');
+            traineesService.add(item, function () {
+                $location.path('/trainees');
+            });            
         };
+
 }]);

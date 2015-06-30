@@ -4,7 +4,9 @@
         $scope.back = $location;
         
         $scope.addNewMentor = function (item) {
-            mentorsService.add(item);
-            $location.path('/mentors');
+            mentorsService.add(item, function () {
+                $location.path('/mentors');
+            });
+            
         };
     }]);

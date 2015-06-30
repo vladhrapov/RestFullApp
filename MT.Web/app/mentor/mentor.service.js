@@ -9,8 +9,8 @@ mentors.service('mentorsService', ['$http',
         $http.get('/api/mentors/' + id).then(callback);
     };
 
-    this.add = function (item) {
-        $http.post('/api/mentors/', item);
+    this.add = function (item, callback) {
+        $http.post('/api/mentors/', item).success(callback);
     };
 
     this.edit = function (item) {

@@ -9,8 +9,8 @@
         $http.get('/api/trainees/' + id).then(callback);
     };
 
-    this.add = function (item) {
-        $http.post('/api/trainees/', item);
+    this.add = function (item, callback) {
+        $http.post('/api/trainees/', item).success(callback);
     };
 
     this.edit = function (item) {
