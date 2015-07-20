@@ -6,16 +6,17 @@
         <td>Last Name</td>
         <td>Middle Name</td>
         <td>Primary Skill</td>
+        <td></td>
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="mentor in mentorCollection | filter: search" ng-click="currentPath.path(currentPath.path() + '/' + mentor.Id)">
-
-        <td>{{$index + 1}}</td>
-        <td>{{mentor.FirstName}}</td>
-        <td>{{mentor.LastName}}</td>
-        <td>{{mentor.MiddleName}}</td>
-        <td>{{mentor.PrimarySkill}}</td>
-    </tr>
+        <tr ng-repeat="mentor in mentorCollection | filter: search" ng-click="showMentorInfo(mentor)">
+            <td>{{$index + 1}}</td>
+            <td>{{mentor.FirstName}}</td>
+            <td>{{mentor.LastName}}</td>
+            <td>{{mentor.MiddleName}}</td>
+            <td>{{mentor.PrimarySkill}}</td>
+            <td><button class="btn btn-default" type="button" ng-click="navigateToTrainees(mentor)">Mentees</button></td>
+        </tr>
     </tbody>
 </table>

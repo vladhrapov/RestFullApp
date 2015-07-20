@@ -1,10 +1,18 @@
 mentors.controller('mentorsListCtrl', ['$scope', '$location', '$routeParams', 'mentorsService',
     function ($scope, $location, $routeParams, mentorsService) {
 
-    mentorsService.getAll(function (res) {
-        $scope.mentorCollection = res.data;
-    });
+        $scope.setTitle('Mentors');
 
-    $scope.currentPath = $location;
+        mentorsService.getAll().then(function (res) {
+            $scope.mentorCollection = res.data;
+        });
+
+        $scope.showMentorInfo = function (mentor) {
+            $location.path($location.path() + '/' + mentor.Id);
+        };
+
+        $scope.navigateToTrainees = function (mentor) {
+            $location.path($location.path() + '/' + mentor.Id + '/trainees');
+        };
 
 }]);

@@ -117,9 +117,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\shared\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Content\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -164,18 +162,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\shared\filters\fullname.filter.js" />
+    <Content Include="Content\styles.css" />
     <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="app\app.js" />
-    <Content Include="app\mentor\add\add.controller.js" />
-    <Content Include="app\mentor\add\mentor-add.html" />
     <Content Include="app\mentor\details\details.controller.js" />
     <Content Include="app\mentor\details\mentor-details.html" />
     <Content Include="app\mentor\list\list.controller.js" />
     <Content Include="app\mentor\list\mentors-list.html" />
     <Content Include="app\mentor\mentor.service.js" />
-    <Content Include="app\trainee\add\add.controller.js" />
-    <Content Include="app\trainee\add\trainee-add.html" />
     <Content Include="app\trainee\details\details.controller.js" />
     <Content Include="app\trainee\details\trainee-details.html" />
     <Content Include="app\trainee\list\list.controller.js" />

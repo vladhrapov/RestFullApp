@@ -1,36 +1,57 @@
 <div class="row">
 
-    <div class="col-sm-3">
+    <div class="col-sm-2"></div>
+
+    <div class="col-sm-8">
+        <form name="traineeForm">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input id="firstName" class="form-control" type="text" name="FirstName" ng-model="item.FirstName" required />
+                <span ng-show="traineeForm.FirstName.$error.required && !traineeForm.FirstName.$pristine">
+                    First name is required
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input id="lastName" class="form-control" type="text" name="LastName" ng-model="item.LastName" required />
+                <span ng-show="traineeForm.LastName.$error.required && !traineeForm.LastName.$pristine">
+                    Last name is required
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="middleName">Middle Name:</label>
+                <input id="middleName" class="form-control" type="text" name="MiddleName" ng-model="item.MiddleName" required />
+                <span ng-show="traineeForm.MiddleName.$error.required && !traineeForm.MiddleName.$pristine">
+                    Middle name is required
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input id="email" class="form-control" type="email" name="Email" ng-model="item.Email" ng-pattern="emailValidate" required />
+                <span ng-show="traineeForm.Email.$error.pattern && !traineeForm.Email.$pristine">
+                    Email is required
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input id="phone" class="form-control" type="tel" name="Phone" ng-model="item.Phone" required />
+                <span ng-show="traineeForm.Phone.$error.required && !traineeForm.Phone.$pristine">
+                    Phone number is required
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="myMentor">Mentor:</label>
+                <select id="myMentor" name="myMentor" class="form-control" ng-model="item.MentorId">
+                    <option selected="selected" value="{{mentor.Id}}" ng-repeat="mentor in mentorCollection">{{ mentor | fullname : true}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary btn-success" ng-disabled="traineeForm.$invalid" ng-click="save()">Save</button>
+                <button type="button" class="btn btn-primary btn-info" ng-click="back()">Cancel</button>
+            </div>
+        </form>
     </div>
 
-    <div class="col-sm-6">
-        <div class="form-group" ng-if="trainee">
-            <pre>    
-            <b>Name:</b> {{trainee.FirstName}}
-            </pre>
-            <pre>    
-            <b>Last Name:</b> {{trainee.LastName}}
-            </pre>
-            <pre>    
-            <b>Middle Name:</b> {{trainee.MiddleName}}
-            </pre>
-            <pre>    
-            <b>Email:</b> {{trainee.Email}}
-            </pre>
-            <pre>
-
-            <b>Phone:</b> {{trainee.Phone}}
-            </pre>
-        </div>
-        <p ng-if="!trainee">{{empty}}</p>
-
-
-        <div class="form-group">
-            <button type="button" class="btn btn-primary btn-info" ng-click="back.path('/trainees')">Back</button>
-        </div>
-    </div>
-
-    <div class="col-sm-3">
-    </div>
+    <div class="col-sm-2"></div>
 
 </div>

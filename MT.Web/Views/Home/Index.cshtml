@@ -1,8 +1,8 @@
 ﻿
-<div class="container-fluid">
+<div class="container-fluid" ng-controller="mainCtrl">
 
 
-    <div class="row" ng-controller="mainCtrl">
+    <div class="row">
         <div class="col-xs-11">
             <h1><span class="glyphicon glyphicon-user"></span>{{title}}</h1>
         </div>
@@ -18,8 +18,8 @@
     <div class="row">
         <div class="col-sm-3">
             <ul class="nav nav-pills nav-stacked">
-                <li nav-item><a href="#/mentors">Mentors</a></li>
-                <li nav-item><a href="#/trainees">Trainees</a></li>
+                <li nav-item><a ng-click="navigateTo('/mentors')">Mentors</a></li>
+                <li nav-item><a ng-click="navigateTo('/trainees')">Trainees</a></li>
             </ul>
         </div>
         <div class="col-sm-9" ng-view>

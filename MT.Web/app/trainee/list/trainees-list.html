@@ -5,16 +5,16 @@
         <td>Name</td>
         <td>Last Name</td>
         <td>Middle Name</td>
-        <td>Mentor</td>
+        <td ng-if="showMentor">Mentor</td>
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="trainee in traineeCollection | filter: search" ng-click="currentPath.path(currentPath.path()+ '/'+ trainee.Id)">
+    <tr ng-repeat="trainee in traineeCollection | filter: search" ng-click="showTraineeInfo(trainee)">
         <td>{{$index + 1}}</td>
         <td>{{trainee.FirstName}}</td>
         <td>{{trainee.LastName}}</td>
         <td>{{trainee.MiddleName}}</td>
-        <td>{{trainee.Mentor.FirstName + " " + trainee.Mentor.LastName}} </td>
+        <td ng-if="showMentor">{{trainee.Mentor | fullname : false}} </td>
     </tr>
     </tbody>
 </table>

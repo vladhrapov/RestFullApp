@@ -20,15 +20,14 @@ namespace MT.Web
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                         "~/Scripts/angular.min.js",
                         "~/Scripts/angular-route.min.js",
-                        "~/app/app.js",                        
+                        "~/app/*.js",                        
                         "~/app/mentor/*.js",
-                        "~/app/mentor/add/*.js",
                         "~/app/mentor/details/*.js",
                         "~/app/mentor/list/*.js",
                         "~/app/trainee/*.js",
-                        "~/app/trainee/add/*.js",
                         "~/app/trainee/details/*.js",
-                        "~/app/trainee/list/*.js"
+                        "~/app/trainee/list/*.js",
+                        "~/app/shared/filters/*.js"
                         ));
 
 

@@ -36,6 +36,7 @@ namespace MT.Web.Controllers
         // PUT api/trainees/5
         public void Put(int id, [FromBody]Trainee trainee)
         {
+            trainee.Mentor = null;
             _uow.Trainee.InsertOrUpdate(trainee);
             _uow.Save();
         }
